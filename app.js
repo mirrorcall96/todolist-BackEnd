@@ -5,7 +5,7 @@ const cors = require("cors");
 const todolistRouters = require("./routers/todolistRouters");
 app = express();
 app.use(cors());
-db.sequelize.sync({ force: true });
+db.sequelize.sync();
 
 app.use(express.json());
 app.use("/todolist", todolistRouters);
